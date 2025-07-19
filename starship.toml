@@ -1,0 +1,109 @@
+"$schema" = "https://starship.rs/config-schema.json"
+
+format = """
+$container\
+$os\
+$username \
+$directory \
+$git_branch\
+$git_status\
+$rust\
+$c\
+$cmake\
+$cmd_duration\
+
+$line_break\
+$character\
+"""
+
+[os]
+disabled = false
+
+[username]
+show_always = true
+style_user = "bold white"
+style_root = "bold yellow"
+format = "[$user]($style) in"
+
+[container]
+format = '[\[$name\]]($style) '
+
+[directory]
+style = "cyan bold"
+format = "[$path]($style)[$read_only]($read_only_style)"
+truncation_length = 3
+
+[aws]
+symbol = "  "
+
+[buf]
+symbol = " "
+
+[c]
+format = 'via [$symbol($name-$version)]($style)'
+symbol = " "
+commands = [['clang', '--version'], ['gcc', '--version']]
+
+[cmake]
+symbol = ""
+format = 'via [$symbol(cmake-$version)]($style)'
+
+[git_branch]
+symbol = " "
+
+[git_commit]
+tag_symbol = '  '
+
+[golang]
+symbol = " "
+
+[nodejs]
+symbol = " "
+
+[os.symbols]
+Alpaquita = " "
+Alpine = " "
+AlmaLinux = " "
+Amazon = " "
+Android = " "
+Arch = " "
+Artix = " "
+CentOS = " "
+Debian = " "
+DragonFly = " "
+Emscripten = " "
+EndeavourOS = " "
+Fedora = " "
+FreeBSD = " "
+Garuda = "󰛓 "
+Gentoo = " "
+HardenedBSD = "󰞌 "
+Illumos = "󰈸 "
+Kali = " "
+Linux = " "
+Mabox = " "
+Macos = " "
+Manjaro = " "
+Mariner = " "
+MidnightBSD = " "
+Mint = " "
+NetBSD = " "
+NixOS = " "
+OpenBSD = "󰈺 "
+openSUSE = " "
+OracleLinux = "󰌷 "
+Pop = " "
+Raspbian = " "
+Redhat = " "
+RedHatEnterprise = " "
+RockyLinux = " "
+Redox = "󰀘 "
+Solus = "󰠳 "
+SUSE = " "
+Ubuntu = " "
+Unknown = " "
+Void = " "
+Windows = "󰍲 "
+
+[rust]
+symbol = "󱘗 "
